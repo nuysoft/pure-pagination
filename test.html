@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Pagination</title>
+    <script src="../assets/js/jquery-1.8.3.js"></script>
+    <script src="pagination.js"></script>
+    <script>
+        $(function(){
+            var container = $('div.container'),
+                data = [];
+            for( var i = 0; i < 100; i++ ) data.push( Math.random() );
+
+            var p = new Pagination(data, 1, 10);
+            
+            container.append('<pre>' + p + '</pre>');    
+        });
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
