@@ -7,17 +7,17 @@
     <script src="pagination.js"></script>
     <script>
         $(function(){
-            var container = $('div.container'),
+            var container = document.getElementById('container'),
                 data = [];
             for( var i = 0; i < 100; i++ ) data.push( Math.random() );
 
             var p = new Pagination(data, 1, 10);
             
-            container.append('<pre>' + p + '</pre>');    
+            container.innerHTML = '<pre>' + p + '</pre>';
         });
     </script>
 </head>
 <body>
-    <div class="container"></div>
+    <div id="container"></div>
 </body>
 </html>
